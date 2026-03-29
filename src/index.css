@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-4 py-3 rounded-lg font-medium
+           hover:bg-primary-700 active:bg-primary-800
+           disabled:opacity-50 disabled:cursor-not-allowed
+           transition-colors min-h-[48px];
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-4 py-3 rounded-lg font-medium
+           hover:bg-gray-300 active:bg-gray-400
+           transition-colors min-h-[48px];
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-4;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg
+           focus:ring-2 focus:ring-primary-500 focus:border-primary-500
+           outline-none transition-colors min-h-[48px];
+  }
+
+  .badge {
+    @apply px-2 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+  }
+
+  .badge-draft {
+    @apply badge bg-gray-100 text-gray-600;
+  }
+
+  .badge-open {
+    @apply badge bg-blue-100 text-blue-700;
+  }
+
+  .badge-completed {
+    @apply badge bg-green-100 text-green-700;
+  }
+
+  .fab {
+    @apply fixed bottom-24 right-4 w-14 h-14 bg-primary-600 text-white
+           rounded-full shadow-lg flex items-center justify-center
+           hover:bg-primary-700 active:bg-primary-800
+           transition-all z-40 text-2xl;
+  }
+}
